@@ -1,0 +1,24 @@
+{
+  "name": "meanskeleto",
+  "version": "1.0.0",
+  "description": "basic structure of a mean application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "skeleton",
+    "mean",
+    "MEANstack",
+    "0toHero",
+    "meanHotel",
+    "other",
+    "keywords"
+  ],
+  "author": "elaine",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
