@@ -1,6 +1,6 @@
 
 // variable for filename allows using filename in the intro method which can now access it
-// it's not exposed to app.js but it will be used here
+// it's not exposed to app.js but it will be used heress
 var filename = "index.js";
 
 var hello = function(name) {

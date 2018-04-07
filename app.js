@@ -1,6 +1,6 @@
-var express = require('express')
+var express = require('express')  //  require express
 // will check the node+modules folder to find node.js. is assumes this is js file because this is javascrips
-var app = express();
+var app = express();  //  initialize express
 
 
 
@@ -21,9 +21,32 @@ console.log(answer);
 goodbye();
 
 
-// app.get('/', function(request, response) {
-//     response.sendFile(__dirname + "/public/index.html");
-// });
+//  set the port
+app.set('port', 3000);
+
+// set a routes
+app.get('/', function(req, res ) {
+    console.log('GET the homepage');
+    res
+    .status(404)
+    .send("Express yourself");
+});
+
+// set a json routes
+app.get('/json', function(req, res ) {
+    console.log('GET json');
+    res
+    .status(200)
+    .json({"jsonData" : true} );
+});
+
+//  asynchronous port listener
+var server = app.listen(app.get('port'), function() {
+    var port = server.address().port;
+    console.log("Listening on port " + port);
+});
 
 
-app.listen(process.env.PORT);
+//  app.listen(process.env.PORT);
+//  to prove the port listener is asynchronous
+//  console.log('Me first');
