@@ -22,9 +22,9 @@ goodbye();
 
 
 //  set the port
-app.set('port', 3000);
+app.set('port', process.env.PORT);
 
-// set a routes
+// set a routes  --  this shows up in the index.html file, overwrites anything else there
 app.get('/', function(req, res ) {
     console.log('GET the homepage');
     res
@@ -33,7 +33,7 @@ app.get('/', function(req, res ) {
 });
 
 // set a json routes
-app.get('/json', function(req, res ) {
+app.get('/json', function(req, res) {
     console.log('GET json');
     res
     .status(200)
